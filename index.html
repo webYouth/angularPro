@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>angularPro</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <script type="text/javascript" src="js/rem.js"></script>
+</head>
+<body>
+    <header>My AngularJs Project!</header>
+    <div class="controller" ng-controller="mycontro">
+        <div class="search">
+            <div class="wrap">
+                <input class="input" type="text" ng-model="name">
+                <input class="btn" type="button" ng-click="search()" value="搜索">
+            </div>
+        </div>
+        <div class="showlist">
+            <ul class="list">
+                <li ng-repeat="data in userlist">
+                    <dl>
+                        <dt class="l"><img src="img/{{data.img}}" alt="头像"></dt>
+                        <dd class="l content"><p class="p1">{{data.username}}</p><p class="p2">{{data.userimfor}}</p></dd>
+                        <dd class="iconfont l">&#xe608;</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/angular.min13.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
